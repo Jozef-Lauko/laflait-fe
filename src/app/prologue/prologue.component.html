@@ -1,0 +1,16 @@
+<div class="container">
+  <h3>Výpožičky</h3>
+
+  <app-prologue-form
+    [PrologueData]="prologue"
+    (formCreate)="createPrologue($event)"
+    (formUpdate)="updatePrologue($event)" >
+  </app-prologue-form>
+
+  <app-prologue-list
+    [prologues]="prologues"
+    (prologueToUpdate)="selectPrologueToUpdate($event)"
+    (prologueToDelete)="deletePrologue($event)">
+  </app-prologue-list>
+
+</div>

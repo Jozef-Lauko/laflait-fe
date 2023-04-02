@@ -1,0 +1,16 @@
+<div class="container">
+  <table *ngIf="prologues.length">
+    <tr>
+      <th>ID pouzivatela</th>
+      <th>ID knihy</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let prologue of prologues">
+      <td>{{prologue.title}}</td>
+      <td>{{prologue.text}}</td>
+      <td><button class="delete-btn" (click)="updatePrologue(prologue.id)">Zmazat</button></td>
+      <td><button class="edit-btn" (click)="updatePrologue(prologue.id)">Upravit</button></td>
+    </tr>
+  </table>
+</div>

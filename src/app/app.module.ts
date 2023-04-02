@@ -9,7 +9,6 @@ import {ThesesComponent} from "./theses/theses.component";
   declarations: [
     AppComponent,
     ThesesComponent,
-    PrologueComponent,
   ],
   imports: [
     BrowserModule,
