@@ -1,0 +1,15 @@
+<div class="container">
+  <table *ngIf="theses.length">
+    <tr>
+      <th>Nazov</th>
+      <th>Text</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let these of theses">
+      <td>{{these.title}}</td>
+      <td>{{these.text}}</td>
+      <td><button class="delete-btn" (click)="deleteThese(these.id)">Zmazat</button></td>
+      <td><button class="edit-btn" (click)="updateThese(these.id)">Upravit</button></td>
+    </tr>
+  </table>
+</div>

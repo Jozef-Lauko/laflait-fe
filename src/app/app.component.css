@@ -1,0 +1,68 @@
+.nazov{
+  margin-left: 0.1em;
+  font-family: serif;
+  font-size: 3.5em;
+  color: #FF595A;
+}
+
+p{
+  margin-left: 0.4em;
+  color: beige;
+}
+
+.toolbar {
+  margin-top: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #001233;
+  color: #FF595A;
+  font-weight: 600;
+}
+
+.menu{
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.header{
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.header button {
+  margin: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: beige;
+  text-align: center;
+}
+
+.header button:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 1em;
+  width: 100%;
+  text-align: left;
+  border-top: 0.1em solid beige;
+}
+
+.footer-button {
+  position: fixed;
+  left: 0;
+  bottom: 1em;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-button:hover {
+  text-decoration: underline;
+}
+

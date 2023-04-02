@@ -1,0 +1,14 @@
+<div class="container">
+  <h3>TEZY</h3>
+
+  <app-these-form
+    [TheseData]="these"
+    (formUpdate)="updateThese($event)" >
+  </app-these-form>
+
+  <app-these-list
+    [theses]="theses"
+    (theseToUpdate)="selectTheseToUpdate($event)"
+    (theseToDelete)="deleteThese($event)">
+  </app-these-list>
+</div>
