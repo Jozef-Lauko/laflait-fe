@@ -1,4 +1,3 @@
-<div class="toolbar" role="banner">
   <span><img
     width="73"
     alt="LaFLaIT"
@@ -6,15 +5,15 @@
   /></span>
   <span class="nazov">LaFLaIT</span>
   <div class="header">
-    <button>
+    <button routerLink="prologue">
       ÚVOD
     </button>
-    <button>
+    <button routerLink="theses">
       TÉZY
     </button>
   </div>
 
-</div>
+
 
 <div class="footer">
   <span class="nazov">LaFLaIT</span>
@@ -33,7 +32,16 @@
   </div>
 </div>
 
+<div class="container">
+  <ng-container *ngIf="actualMenu === menu.PROLOGUES">
+    <router-outlet></router-outlet>
+  </ng-container>
 
+  <ng-container *ngIf="actualMenu === menu.THESES">
+    <router-outlet></router-outlet>
+  </ng-container>
+
+</div>
 
 
 

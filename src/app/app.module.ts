@@ -2,17 +2,25 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import {RouterLink} from "@angular/router";
+import {RouterLink, RouterOutlet} from "@angular/router";
 import {ThesesComponent} from "./theses/theses.component";
+import {PrologueComponent} from "./prologue/prologue.component";
+import {FormsModule} from "@angular/forms";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
     ThesesComponent,
+    PrologueComponent
   ],
   imports: [
     BrowserModule,
-    RouterLink
+    RouterLink,
+    RouterOutlet,
+    FormsModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

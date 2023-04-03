@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
 
-export enum Menu{
+export enum Menu {
   THESES = 'THESES',
   PROLOGUES = 'PROLOGUES',
   CHAPTERS = 'CHAPTERS'
@@ -13,8 +13,6 @@ export enum Menu{
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'LaFlaIT';
-
   menu = Menu;
   actualMenu = Menu.PROLOGUES;
 
