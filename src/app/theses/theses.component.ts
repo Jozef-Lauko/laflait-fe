@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Menu} from "../app.component";
 import {These} from "../model/these.model";
+import {ThesesService} from "../service/theses/theses.service";
 
 @Component({
   selector: 'app-these',
@@ -16,6 +17,9 @@ export class ThesesComponent {
   theses: Array<These> = [];
   these?: These;
 
+  constructor( private service: ThesesService) {
+    this.getAllTheses();
+  }
   createThese(these: These){
     this.theses.push(these);
   }
@@ -31,9 +35,10 @@ export class ThesesComponent {
     this.these = this.theses.find(these => these.id === theseId);
   }
 
-  deleteThese(theseId: number): void{
-    const index = this.theses.findIndex(these => these.id === theseId);
-    if (index !== -1){ this.theses.splice(index, 1); }
+  private getAllTheses() {
+    this.service.getTheses().subscribe((Theses) =>{
+      this.theses = Theses;
+    })
   }
 }
 

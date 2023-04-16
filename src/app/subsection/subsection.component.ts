@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Menu} from "../app.component";
 import {Subsection} from "../model/subsection.model";
+import {SubsectionService} from "../service/subsection/subsection.service";
 
 @Component({
   selector: 'app-subsection',
@@ -16,6 +17,10 @@ export class SubsectionComponent {
   subsections: Array<Subsection> = [];
   subsection?: Subsection;
 
+  constructor( private service: SubsectionService) {
+    this.getAllSubsections();
+  }
+
   createSubsection(subsection: Subsection){
     this.subsections.push(subsection);
   }
@@ -29,6 +34,12 @@ export class SubsectionComponent {
 
   selectSubsectionToUpdate(subsectionId: number): void{
     this.subsection = this.subsections.find(subsection => subsection.id === subsectionId);
+  }
+
+  private getAllSubsections() {
+    this.service.getSubsections().subscribe((Subsections) =>{
+      this.subsections = Subsections;
+    })
   }
 }
 

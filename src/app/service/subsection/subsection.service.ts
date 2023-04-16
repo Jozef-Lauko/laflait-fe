@@ -8,7 +8,7 @@ import {Subsection} from "../../model/subsection.model";
   providedIn: 'root'
 })
 export class SubsectionService {
-  private url = 'http://labs.fpv.umb.sk:8081/api/subsection';
+  private url = 'http://localhost:8080/api/subsection';
 
   constructor(private http: HttpClient) { }
 

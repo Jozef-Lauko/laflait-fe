@@ -1,0 +1,62 @@
+.logo{
+  background: url("image/LaFLaIT.jpg");
+  float: left;
+  width: 73px;
+  height: 75px;
+}
+.header {
+  overflow: hidden;
+  padding: 10px 5px;
+  text-align: center;
+  display: block;
+}
+.text{
+  text-decoration: none;
+  float: left;
+  display: inline-block;
+  color: #FF595A;
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: center;
+}
+
+.text h1{
+  display: inline-block;
+  font-size: xx-large;
+}
+.header button {
+  float: contour;
+  margin: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: beige;
+  text-align: center;
+}
+
+.header button:hover {
+  text-decoration: underline;
+}
+
+.header button.active {
+  color: #FF595A;
+}
+
+.button1 {
+  background-color: #FF595A;
+  color: #FF595A;
+  border: 5px solid black;
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header button {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-center {
+    float: none;
+  }
+}

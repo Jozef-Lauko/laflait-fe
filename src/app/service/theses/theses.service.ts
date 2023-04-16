@@ -8,11 +8,11 @@ import {These} from "../../model/these.model";
   providedIn: 'root'
 })
 export class ThesesService {
-  private url = 'http://labs.fpv.umb.sk:8081/api/these';
+  private url = 'http://localhost:8080/api/these';
 
   constructor(private http: HttpClient) { }
 
-  getTheses(): Observable<These[]> {
+  getTheses(): Observable<Array<These>> {
     return this.http.get<These[]>(this.url);
   }
 

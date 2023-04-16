@@ -1,15 +1,12 @@
-<div class="container">
-  <h3>TEZY</h3>
-<!--
-  <app-these-form
-    [TheseData]="these"
-    (formUpdate)="updateThese($event)" >
-  </app-these-form>
-
-  <app-these-list
-    [theses]="theses"
-    (theseToUpdate)="selectTheseToUpdate($event)"
-    (theseToDelete)="deleteThese($event)">
-  </app-these-list>
-  -->
-</div>
+<app-header></app-header>
+<body>
+  <div class="container">
+    <div *ngFor="let t of theses">
+      <table>
+        <td>{{t.title}}</td>
+        <td>{{t.description}}</td>
+      </table>
+    </div>
+  </div>
+</body>
+<app-footer></app-footer>
