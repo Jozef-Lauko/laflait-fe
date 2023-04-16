@@ -1,4 +1,4 @@
-export interface Prologue{
+export interface Subsection{
   id: number
   title: string;
   text: string;

@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {ThesesComponent} from "./theses/theses.component";
 import {PrologueComponent} from "./prologue/prologue.component";
+import {SectionComponent} from "./section/section.component";
+import {SubsectionComponent} from "./subsection/subsection.component";
 import {FormsModule} from "@angular/forms";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 
@@ -12,7 +14,9 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
   declarations: [
     AppComponent,
     ThesesComponent,
-    PrologueComponent
+    PrologueComponent,
+    SectionComponent,
+    SubsectionComponent
   ],
   imports: [
     BrowserModule,

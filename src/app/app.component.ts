@@ -4,7 +4,8 @@ import {Router} from "@angular/router";
 export enum Menu {
   THESES = 'THESES',
   PROLOGUES = 'PROLOGUES',
-  CHAPTERS = 'CHAPTERS'
+  SECTIONS = 'SECTIONS',
+  SUBSECTIONS = 'SUBSECTIONS'
 }
 
 @Component({
@@ -23,8 +24,8 @@ export class AppComponent {
     switch (menuItem){
       case Menu.PROLOGUES: this.router.navigate(['prologue']); break;
       case Menu.THESES: this.router.navigate(['these']); break;
-      case Menu.CHAPTERS: this.router.navigate(['chapter']); break;
-
+      case Menu.SECTIONS: this.router.navigate(['section']); break;
+      case Menu.SUBSECTIONS: this.router.navigate(['subsection']); break;
     }
   }
 }

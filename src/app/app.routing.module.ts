@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import {ThesesComponent} from "./theses/theses.component";
 import {PrologueComponent} from "./prologue/prologue.component";
+import {SectionComponent} from "./section/section.component";
+import {SubsectionComponent} from "./subsection/subsection.component";
 
 const routes: Routes = [
   {
@@ -12,6 +14,14 @@ const routes: Routes = [
   {
     path: 'these',
     component: ThesesComponent
+  },
+  {
+    path: 'section',
+    component: SectionComponent
+  },
+  {
+    path: 'subsection',
+    component: SubsectionComponent
   },
   {
     path: '',

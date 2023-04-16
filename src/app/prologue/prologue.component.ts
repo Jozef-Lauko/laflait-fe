@@ -37,13 +37,6 @@ export class PrologueComponent {
     })
   }
 
-  deletePrologue(prologueId: number): void {
-    this.service.deletePrologue(prologueId).subscribe(()=> {
-      console.log("Delete prologue OK");
-      this.getPrologues();
-    })
-  }
-
   private getPrologues() {
     this.service.getPrologues().subscribe((prologues: Prologue[]) => {
       this.prologues = prologues;

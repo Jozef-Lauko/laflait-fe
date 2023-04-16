@@ -1,47 +1,49 @@
-  <span><img
-    width="73"
-    alt="LaFLaIT"
-    src="images/LaFLaIT.jpg"
-  /></span>
-  <span class="nazov">LaFLaIT</span>
+<body>
   <div class="header">
-    <button routerLink="prologue">
-      ÚVOD
-    </button>
-    <button routerLink="theses">
-      TÉZY
-    </button>
+    <a class="logo"></a>
+    <a class="text"><h1>LaFLa IT</h1></a>
+    <div class="header-center">
+      <button>
+        ÚVOD
+      </button>
+      <button>
+        TÉZY
+      </button>
+      <button class="button1">
+        Prihlásenie
+      </button>
+    </div>
   </div>
 
+  <div class="container">
+    <ng-container *ngIf="actualMenu === menu.PROLOGUES">
+      <router-outlet></router-outlet>
+    </ng-container>
 
+    <ng-container *ngIf="actualMenu === menu.THESES">
+      <router-outlet></router-outlet>
+    </ng-container>
 
-<div class="footer">
-  <span class="nazov">LaFLaIT</span>
-  <p>2023 © LaFLa IT  All rights reserved.</p>
+  <footer>
+      <div class="footer-content">
+        <h3>LaFLaIT</h3>
+        <p>Ďakujeme za navštívenie našej stránky, </p>
+      </div>
 
-</div>
+      <div class="footer-bottom">
+        <p>2023 © LaFLa IT  All rights reserved.</p>
+        <div class="footer button">
+          <button>
+            ÚVOD
+          </button>
+          <button>
+            TÉZY
+          </button>
+        </div>
+      </div>
+  </footer>
 
-<div class="footer-button">
-  <div class="header">
-  <button>
-    ÚVOD
-  </button>
-  <button>
-    TÉZY
-  </button>
   </div>
-</div>
-
-<div class="container">
-  <ng-container *ngIf="actualMenu === menu.PROLOGUES">
-    <router-outlet></router-outlet>
-  </ng-container>
-
-  <ng-container *ngIf="actualMenu === menu.THESES">
-    <router-outlet></router-outlet>
-  </ng-container>
-
-</div>
-
+</body>
 
 
