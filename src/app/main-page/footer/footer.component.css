@@ -1,5 +1,4 @@
 footer{
-  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
@@ -30,8 +29,8 @@ footer{
 }
 
 .footer-content p{
-  max-width: 150px;
-  margin: 5px auto;
+  max-width: 250px;
+  margin: 2px auto;
   line-height: 25px;
   font-size: 14px;
   color: #cacdd2;
@@ -41,51 +40,20 @@ footer{
 .footer-bottom{
   background: #FF595A;
   width: 100vw;
-  padding: 10px;
+  padding: 20px;
   border-top: 0.1em solid beige;
-  text-align: center;
+  text-align: justify;
 }
 
 .footer-bottom p{
-  float: contour;
+  text-align: center;
   font-size: 14px;
   word-spacing: 1px;
   text-transform: capitalize;
 }
-.footer-bottom p a{
-  color:#44bae8;
-  font-size: 16px;
-  text-decoration: none;
-}
+
 .footer-bottom span{
   text-transform: uppercase;
   opacity: .4;
   font-weight: 200;
-}
-
-.footer button {
-  float: contour;
-  margin: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  color: beige;
-  text-align: center;
-}
-
-.footer button:hover {
-  text-decoration: underline;
-}
-
-.footer button.active {
-  color: #FF595A;
-}
-
-@media (max-width:500px) {
-  .footer-menu ul{
-    display: flex;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
 }

@@ -1,4 +1,4 @@
-export interface These{
+export interface Theses {
   id: number;
   title: string;
   description: string;

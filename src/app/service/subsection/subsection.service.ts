@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Subsection} from "../../model/subsection.model";
-
+import {Subsection} from "../../model/subsection/subsection.model";
 
 @Injectable({
   providedIn: 'root'
 })
 export class SubsectionService {
-  private url = 'http://localhost:8080/api/subsection';
+
+  private url = 'http://localhost:8080/api/podkapitoly';
 
   constructor(private http: HttpClient) { }
 
@@ -16,15 +16,4 @@ export class SubsectionService {
     return this.http.get<Subsection[]>(this.url);
   }
 
-  getSubsection(subsectionId: number): Observable<Subsection> {
-    return this.http.get<Subsection>(`${this.url}/${subsectionId}`);
-  }
-
-  creatSubsection(subsection: Subsection): Observable<number> {
-    return this.http.post<number>(this.url, subsection);
-  }
-
-  updateSubsection(subsection: Subsection): Observable<Subsection> {
-    return this.http.put<Subsection>(`${this.url}/${subsection.id}`, subsection);
-  }
 }

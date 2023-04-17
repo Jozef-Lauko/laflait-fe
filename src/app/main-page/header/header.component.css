@@ -1,5 +1,5 @@
 .logo{
-  background: url("image/LaFLaIT.jpg");
+  background: url("image/LaFLa_IT.png");
   float: left;
   width: 73px;
   height: 75px;
@@ -20,6 +20,7 @@
 }
 
 .text h1{
+  color: #FF595A;
   display: inline-block;
   font-size: xx-large;
 }

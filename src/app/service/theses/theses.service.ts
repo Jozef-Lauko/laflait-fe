@@ -1,34 +1,19 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {These} from "../../model/these.model";
-
+import {Theses} from "../../model/theses/theses.model";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ThesesService {
-  private url = 'http://localhost:8080/api/these';
+
+  private url = 'http://localhost:8080/api/tezy';
 
   constructor(private http: HttpClient) { }
 
-  getTheses(): Observable<Array<These>> {
-    return this.http.get<These[]>(this.url);
+  getTheses(): Observable<Theses[]> {
+    return this.http.get<Theses[]>(this.url);
   }
 
-  getThese(theseId: number): Observable<These> {
-    return this.http.get<These>(`${this.url}/${theseId}`);
-  }
-
-  createThese(these: These): Observable<number> {
-    return this.http.post<number>(this.url, these);
-  }
-
-  updateThese(these: These): Observable<These> {
-    return this.http.put<These>(`${this.url}/${these.id}`, these);
-  }
-
-  deleteThese(theseId: number): Observable<void> {
-    return this.http.delete<void>(`${this.url}/${theseId}`);
-  }
 }
