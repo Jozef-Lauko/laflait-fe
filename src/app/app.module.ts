@@ -12,6 +12,9 @@ import { BodyComponent } from './main-page/body/body.component';
 import { PageComponent } from './main-page/page/page.component';
 import { SectionPageComponent } from './section-page/section-page.component';
 import { SubsectionPageComponent } from './subsection-page/subsection-page.component';
+import { ThesesFormComponent } from './theses-page/theses-form/theses-form.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import { ThesesListComponent } from './theses-page/theses-list/theses-list.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +25,16 @@ import { SubsectionPageComponent } from './subsection-page/subsection-page.compo
     BodyComponent,
     PageComponent,
     SectionPageComponent,
-    SubsectionPageComponent
+    SubsectionPageComponent,
+    ThesesFormComponent,
+    ThesesListComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    RouterOutlet
+    RouterOutlet,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
