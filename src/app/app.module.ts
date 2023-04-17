@@ -12,6 +12,7 @@ import { BodyComponent } from './main-page/body/body.component';
 import { PageComponent } from './main-page/page/page.component';
 import { SectionPageComponent } from './section-page/section-page.component';
 import { SubsectionPageComponent } from './subsection-page/subsection-page.component';
+import { ProloguePageComponent } from './prologue-page/prologue-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SubsectionPageComponent } from './subsection-page/subsection-page.compo
     BodyComponent,
     PageComponent,
     SectionPageComponent,
-    SubsectionPageComponent
+    SubsectionPageComponent,
+    ProloguePageComponent
   ],
   imports: [
     HttpClientModule,
