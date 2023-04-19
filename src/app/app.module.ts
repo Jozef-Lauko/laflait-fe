@@ -12,11 +12,13 @@ import { BodyComponent } from './main-page/body/body.component';
 import { PageComponent } from './main-page/page/page.component';
 import { SectionPageComponent } from './section-page/section-page.component';
 import { SubsectionPageComponent } from './subsection-page/subsection-page.component';
+import { ProloguePageComponent } from './prologue-page/prologue-page.component';
 import { ThesesFormComponent } from './theses-page/theses-form/theses-form.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { ThesesListComponent } from './theses-page/theses-list/theses-list.component';
 import { LoginPageComponent } from './authentication/login-page/login-page.component';
 import { AuthHeaderComponent } from './authentication/interceptor/auth-header/auth-header.component';
+
 
 @NgModule({
   declarations: [
@@ -28,10 +30,12 @@ import { AuthHeaderComponent } from './authentication/interceptor/auth-header/au
     PageComponent,
     SectionPageComponent,
     SubsectionPageComponent,
+    ProloguePageComponent
     ThesesFormComponent,
     ThesesListComponent,
     LoginPageComponent,
     AuthHeaderComponent
+
   ],
   imports: [
     HttpClientModule,
