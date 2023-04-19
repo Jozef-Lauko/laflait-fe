@@ -1,12 +1,13 @@
 <body>
 <br>
-<div>
-  <table>
-    <div *ngFor="let subsection of subsections">
-      <p>{{subsection.title}}</p>
-      <p>{{subsection.text}}</p>
-    </div>
-  </table>
-</div>
+<app-subsection-list
+  [subsections]="subsections"
+  (subsectionToUpdate)="selectSubSectionToUpdate($event)">
+</app-subsection-list>
+
+<app-subsection-form
+  [subsectionData]="subsection"
+  (formUpdate)="updateSubSection($event)">
+</app-subsection-form>
 <br>
 </body>

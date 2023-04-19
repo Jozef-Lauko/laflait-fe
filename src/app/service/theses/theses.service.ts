@@ -16,4 +16,11 @@ export class ThesesService {
     return this.http.get<Theses[]>(this.url);
   }
 
+  getThesis(thesisID: number): Observable<Theses> {
+    return this.http.get<Theses>(`${this.url}/${thesisID}`);
+  }
+
+  updateThesis(thesis: Theses): Observable<number> {
+    return this.http.put<number>(`${this.url}/${thesis.id}`, thesis);
+  }
 }

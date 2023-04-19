@@ -1,0 +1,12 @@
+<div class="container">
+  <table>
+    <div *ngFor="let thesis of theses">
+      <p>{{thesis.title}}</p>
+      <p>{{thesis.description}}</p>
+      <button (click)="getSectionByThesis(thesis.id)">SELECT</button>
+      <button (click)="updateThesis(thesis.id)">
+        Upraviť
+      </button>
+    </div>
+  </table>
+</div>

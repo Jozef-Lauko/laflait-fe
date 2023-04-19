@@ -4,6 +4,8 @@ import {ThesesPageComponent} from "src/app/theses-page/theses-page.component";
 import {RouterModule, Routes} from "@angular/router";
 import {SectionPageComponent} from "./section-page/section-page.component";
 import {SubsectionPageComponent} from "./subsection-page/subsection-page.component";
+import {LoginPageComponent} from "./authentication/login-page/login-page.component";
+import {AuthGuard} from "./authentication/guard/auth.guard";
 
 const routes: Routes = [
   {
@@ -11,12 +13,16 @@ const routes: Routes = [
     component: ThesesPageComponent
   },
   {
-    path: 'kapitoly',
+    path: 'kapitoly/:id',
     component: SectionPageComponent
   },
   {
-    path:'podkapitoly',
+    path:'podkapitoly/:id',
     component: SubsectionPageComponent
+  },
+  {
+    path:'login',
+    component: LoginPageComponent
   }
 ];
 

@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import {Subsection} from "../model/subsection/subsection.model";
 import {SubsectionService} from "../service/subsection/subsection.service";
+import {ActivatedRoute} from "@angular/router";
+import {SectionService} from "../service/section/section.service";
+import {Section} from "../model/section/section.model";
 
 @Component({
   selector: 'app-subsection-page',
@@ -11,15 +14,31 @@ export class SubsectionPageComponent {
 
   subsections: Array<Subsection> = [];
   subsection?: Subsection;
+  id: string | null | undefined;
 
-  constructor(private service: SubsectionService) {
-    this.getSubsections();
+  constructor(private route: ActivatedRoute, private service: SubsectionService) {}
+
+  ngOnInit(){
+    this.id = this.route.snapshot.paramMap.get('id');
+    this.getSubSections(Number (this.id));
   }
 
-  getSubsections(): void {
-    this.service.getSubsections().subscribe((subsections: Subsection[]) => {
-      this.subsections = subsections;
+  getSubSections(id: number): void {
+
+    this.service.getSubSections(id).subscribe((sections: Section[]) => {
+      this.subsections = sections;
     })
   }
 
+  updateSubSection(section: Section): void {
+    this.service.updateSubSection(section).subscribe(() => {
+      this.getSubSections(Number (this.id));
+    })
+  }
+
+  selectSubSectionToUpdate(sectionID: number): void{
+    this.service.getSubSection(sectionID).subscribe((section: Section) =>{
+      this.subsection = section;
+    })
+  }
 }

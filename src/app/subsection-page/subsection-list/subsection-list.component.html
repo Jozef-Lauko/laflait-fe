@@ -1,0 +1,12 @@
+<div class="container">
+  <table>
+    <div *ngFor="let section of subsections">
+      <p>{{section.title}}</p>
+      <p>{{section.text}}</p>
+      <button (click)="updateSubSection(section.id)">
+        Upraviť
+      </button>
+    </div>
+  </table>
+</div>
+

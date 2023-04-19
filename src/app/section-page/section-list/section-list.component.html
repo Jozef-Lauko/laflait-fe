@@ -1,0 +1,12 @@
+<div class="container">
+  <table>
+    <div *ngFor="let section of sections">
+      <p>{{section.title}}</p>
+      <p>{{section.text}}</p>
+      <button (click)="getSubSectionBySection(section.id)">SELECT</button>
+      <button (click)="updateSection(section.id)">
+        Upraviť
+      </button>
+    </div>
+  </table>
+</div>
