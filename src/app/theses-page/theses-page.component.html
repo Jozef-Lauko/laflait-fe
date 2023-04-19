@@ -1,13 +1,13 @@
 <body>
 <br>
-  <div class="container">
-    <table>
-      <div *ngFor="let thesis of theses">
-        <p>{{thesis.title}}</p>
-        <p>{{thesis.description}}</p>
-        <button>SELECT</button>
-      </div>
-    </table>
-  </div>
+  <app-theses-list
+    [theses]="theses"
+    (thesisToUpdate)="selectThesisToUpdate($event)">
+  </app-theses-list>
+
+  <app-theses-form
+    [thesisData]="thesis"
+    (formUpdate)="updateThesis($event)">
+  </app-theses-form>
 <br>
 </body>

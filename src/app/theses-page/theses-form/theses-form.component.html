@@ -1,0 +1,16 @@
+
+<form [formGroup]="form" (submit)="saveThesis()">
+  <label>ID:
+    <input type="text" formControlName="id">
+  </label>
+  <label>Názov:
+    <input type="text" formControlName="title">
+  </label>
+  <label>Popis:
+    <textarea type="text" formControlName="description"></textarea>
+  </label>
+
+  <button type="submit" [disabled]="form.invalid">Uložiť</button>
+  <button type="reset">Zrušiť</button>
+
+</form>
