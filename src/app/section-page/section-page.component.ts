@@ -21,4 +21,16 @@ export class SectionPageComponent {
       this.sections = sections;
     })
   }
+
+  updateSection(section: Section): void {
+    this.service.updateSection(section).subscribe(() => {
+      this.getSections();
+    })
+  }
+
+  selectSectionToUpdate(sectionID: number): void{
+    this.service.getSection(sectionID).subscribe((section: Section) =>{
+      this.section = section;
+    })
+  }
 }

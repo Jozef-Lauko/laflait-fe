@@ -10,7 +10,7 @@ import {AuthGuard} from "./authentication/guard/auth.guard";
 const routes: Routes = [
   {
     path: 'tezy',
-    canActivate: [AuthGuard],
+//    canActivate: [AuthGuard],
     component: ThesesPageComponent
   },
   {

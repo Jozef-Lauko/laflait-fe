@@ -1,12 +1,13 @@
 <body>
 <br>
-<div>
-  <table>
-    <div *ngFor="let section of sections">
-      <p>{{section.title}}</p>
-      <p>{{section.text}}</p>
-    </div>
-  </table>
-</div>
+  <app-section-list
+    [sections]="sections"
+    (sectionToUpdate)="selectSectionToUpdate($event)">
+  </app-section-list>
+
+  <app-section-form
+    [sectionData]="section"
+    (formUpdate)="updateSection($event)">
+  </app-section-form>
 <br>
 </body>

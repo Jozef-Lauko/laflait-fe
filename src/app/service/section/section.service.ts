@@ -16,4 +16,12 @@ export class SectionService {
     return this.http.get<Section[]>(this.url);
   }
 
+  getSection(sectionID: number): Observable<Section> {
+    return this.http.get<Section>(`${this.url}/${sectionID}`);
+  }
+
+  updateSection(section: Section): Observable<number> {
+    return this.http.put<number>(`${this.url}/${section.id}`, section);
+  }
+
 }
