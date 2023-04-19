@@ -6,8 +6,13 @@ import {SectionPageComponent} from "./section-page/section-page.component";
 import {SubsectionPageComponent} from "./subsection-page/subsection-page.component";
 import {LoginPageComponent} from "./authentication/login-page/login-page.component";
 import {AuthGuard} from "./authentication/guard/auth.guard";
+import {ProloguePageComponent} from "./prologue-page/prologue-page.component";
 
 const routes: Routes = [
+  {
+    path: 'uvod',
+    component: ProloguePageComponent
+  },
   {
     path: 'tezy',
     component: ThesesPageComponent

@@ -33,9 +33,6 @@ button:active {
 button:active {
   opacity: .5;
 }
-
-
-
 form {
   display: flex;
   flex-direction: column;

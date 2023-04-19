@@ -32,6 +32,12 @@ h3{
 p{
   color: beige;
   font-family:  Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+
+text{
+  text-align: left;
+  border-radius: 3px;
 }
 
 button {
@@ -59,4 +65,9 @@ button:active {
 
 button:active {
   opacity: .5;
+}
+.right{
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
 }

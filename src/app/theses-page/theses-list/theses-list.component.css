@@ -25,6 +25,15 @@ table{
   border-radius: 3px;
 }
 
+.ramcek{
+  background-color: #001233;
+  border: 3px solid #FF595A;
+  text-align: center;
+  border-radius: 3px;
+  margin: 2em;
+  padding: 1em;
+}
+
 h3{
   color: beige;
 }
