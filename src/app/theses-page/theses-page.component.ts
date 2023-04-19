@@ -21,4 +21,16 @@ export class ThesesPageComponent {
       this.theses = theses;
     })
   }
+
+  updateThesis(thesis: Theses): void {
+    this.service.updateThesis(thesis).subscribe(() => {
+      this.getTheses();
+    })
+  }
+
+  selectThesisToUpdate(thesisID: number): void {
+    this.service.getThesis(thesisID).subscribe((thesis: Theses) => {
+      this.thesis = thesis;
+    })
+  }
 }
