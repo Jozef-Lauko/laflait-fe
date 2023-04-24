@@ -10,6 +10,8 @@ footer{
   border-top: 0.1em solid beige;
   border-radius: 1px;
   font-family: Arial, Helvetica, sans-serif;
+  position: fixed;
+  margin: 0 auto;
 }
 
 .footer-content{
@@ -30,7 +32,7 @@ footer{
 
 .footer-content p{
   max-width: 250px;
-  margin: 2px auto;
+  margin: 4px auto;
   line-height: 25px;
   font-size: 14px;
   color: #cacdd2;
