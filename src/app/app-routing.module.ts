@@ -1,29 +1,33 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {ThesesPageComponent} from "src/app/theses-page/theses-page.component";
 import {RouterModule, Routes} from "@angular/router";
 import {SectionPageComponent} from "./section-page/section-page.component";
 import {SubsectionPageComponent} from "./subsection-page/subsection-page.component";
 import {LoginPageComponent} from "./authentication/login-page/login-page.component";
-import {AuthGuard} from "./authentication/guard/auth.guard";
 import {ProloguePageComponent} from "./prologue-page/prologue-page.component";
+import {AuthGuard} from "./authentication/guard/auth.guard";
+
+
 
 const routes: Routes = [
   {
-    path: 'uvod',
+    path: '',
     component: ProloguePageComponent
   },
   {
     path: 'tezy',
-    component: ThesesPageComponent
+    component: ThesesPageComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'kapitoly/:id',
-    component: SectionPageComponent
+    component: SectionPageComponent,
+    canActivate: [AuthGuard]
   },
   {
     path:'podkapitoly/:id',
-    component: SubsectionPageComponent
+    component: SubsectionPageComponent,
+    canActivate: [AuthGuard]
   },
   {
     path:'login',

@@ -17,4 +17,8 @@ export class HeaderComponent {
     localStorage.removeItem('token');
     localStorage.clear();
   }
+
+  isLogged(): boolean{
+    return this.authService.isLogged();
+  }
 }

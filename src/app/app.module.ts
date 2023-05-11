@@ -21,6 +21,7 @@ import { SectionListComponent } from './section-page/section-list/section-list.c
 import { SectionFormComponent } from './section-page/section-form/section-form.component';
 import { SubsectionListComponent } from './subsection-page/subsection-list/subsection-list.component';
 import { SubsectionFormComponent } from './subsection-page/subsection-form/subsection-form.component';
+import {AuthGuard} from "./authentication/guard/auth.guard";
 
 
 
@@ -50,6 +51,7 @@ import { SubsectionFormComponent } from './subsection-page/subsection-form/subse
     ReactiveFormsModule
   ],
   providers: [
+    AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthHeaderInterceptor,

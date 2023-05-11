@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Auth} from "../model/auth.model";
 import {AuthService} from "../service/auth.service";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-login-page',
@@ -15,7 +15,13 @@ export class LoginPageComponent {
     password: new FormControl(undefined, Validators.required)
   })
 
-  constructor(private authService: AuthService, private router: Router) {
+  message: string | undefined;
+
+  constructor(private authService: AuthService, private router: Router, private route: ActivatedRoute) {
+  }
+
+  ngOnInit(){
+    this.message = this.route.snapshot.queryParams['message'];
   }
 
   login(): void {

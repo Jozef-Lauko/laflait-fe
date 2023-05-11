@@ -1,5 +1,9 @@
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 <body>
+<div class="message" *ngIf="message">
+  {{ message }}
+</div>
+
   <div class="container">
     <div class="background">
       <form [formGroup]="form" (submit)="login()" >
@@ -9,7 +13,7 @@
         </label>
 
         <label>Heslo:
-          <input formControlName="password">
+          <input formControlName="password" type="password">
         </label>
 
         <button type="submit">Prihlásiť sa</button>
