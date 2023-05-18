@@ -24,6 +24,7 @@
   display: inline-block;
   font-size: xx-large;
 }
+
 .header button {
   float: contour;
   margin: 25px;
@@ -48,7 +49,6 @@
   color: #FF595A;
   border: 5px solid black;
   float: right;
-
 }
 
 @media screen and (max-width: 500px) {

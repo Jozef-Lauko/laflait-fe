@@ -1,6 +1,6 @@
 <div class="header">
   <a class="logo"></a>
-  <a class="text"><h1>&nbsp;&nbsp; LaFLa IT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1></a>
+  <a class="text"><h1>&nbsp;&nbsp; LaFLa IT</h1></a>
   <div class="header-center">
     <button routerLink="">
       ÚVOD
@@ -8,12 +8,9 @@
     <button routerLink="tezy" routerLinkActive="active-link">
       TÉZY
     </button>
-    <button>TESTY</button>
 
-    <button *ngIf="isLogged()" class="button1" (click)="logout()">Odhlásiť</button>
-    <button *ngIf="!isLogged()" routerLink="login" class="button1">
-      Prihlásenie
-    </button>
+    <button *ngIf="isLogged()" class="button1" (click)="logout()">Odhlásenie</button>
+    <button *ngIf="!isLogged()" routerLink="login" class="button1">Prihlásenie</button>
 
   </div>
 </div>
