@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="text">
+    <div *ngFor="let note of notes">
+      <h3>{{note.title}}</h3>
+      <p>{{note.text}}</p>
+      <div class="right">
+        <button (click)="updateNote(note.id)">
+          Upraviť
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

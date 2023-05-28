@@ -22,6 +22,12 @@ import { SectionFormComponent } from './section-page/section-form/section-form.c
 import { SubsectionListComponent } from './subsection-page/subsection-list/subsection-list.component';
 import { SubsectionFormComponent } from './subsection-page/subsection-form/subsection-form.component';
 import {AuthGuard} from "./authentication/guard/auth.guard";
+import { NotesPageComponent } from './notes-page/notes-page.component';
+import { NotesFormComponent } from './notes-page/notes-form/notes-form.component';
+import { NotesListComponent } from './notes-page/notes-list/notes-list.component';
+import { TestComponent } from './test/test.component';
+import { TestListComponent } from './test/test-list/test-list.component';
+import { TestFormComponent } from './test-form/test-form.component';
 
 
 
@@ -41,7 +47,13 @@ import {AuthGuard} from "./authentication/guard/auth.guard";
     SectionListComponent,
     SectionFormComponent,
     SubsectionListComponent,
-    SubsectionFormComponent
+    SubsectionFormComponent,
+    NotesPageComponent,
+    NotesFormComponent,
+    NotesListComponent,
+    TestComponent,
+    TestListComponent,
+    TestFormComponent
   ],
   imports: [
     HttpClientModule,

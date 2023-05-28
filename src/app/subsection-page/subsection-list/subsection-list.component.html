@@ -1,10 +1,11 @@
 <div class="container">
   <div class="text">
-    <div *ngFor="let section of subsections">
-      <h3>{{section.title}}</h3>
-      <p>{{section.text}}</p>
+    <div *ngFor="let subsection of subsections">
+      <h3>{{subsection.title}}</h3>
+      <p>{{subsection.text}}</p>
       <div class="right">
-      <button (click)="updateSubSection(section.id)">
+        <button (click)="getNoteBySubsection(subsection.id)">SELECT</button>
+        <button (click)="updateSubSection(subsection.id)">
         Upraviť
       </button>
       </div>

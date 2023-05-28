@@ -1,0 +1,13 @@
+<body>
+<br>
+<app-notes-list
+  [notes]="notes"
+  (noteToUpdate)="selectNoteToUpdate($event)">
+</app-notes-list>
+
+<app-notes-form
+  [noteData]="note"
+  (formUpdate)="updateNote($event)">
+</app-notes-form>
+<br>
+</body>

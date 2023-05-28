@@ -22,7 +22,6 @@ export class SectionPageComponent {
   }
 
   getSections(id: number): void {
-
     this.service.getSections(id).subscribe((sections: Section[]) => {
       this.sections = sections;
     })
