@@ -8,6 +8,10 @@
     <button routerLink="tezy" routerLinkActive="active-link">
       TÉZY
     </button>
+    <button routerLink="test" routerLinkActive="active-link">
+      TESTY
+    </button>
+
 
     <button *ngIf="isLogged()" class="button1" (click)="logout()">Odhlásenie</button>
     <button *ngIf="!isLogged()" routerLink="login" class="button1">Prihlásenie</button>

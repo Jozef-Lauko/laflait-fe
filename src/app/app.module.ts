@@ -13,7 +13,7 @@ import { PageComponent } from './main-page/page/page.component';
 import { SectionPageComponent } from './section-page/section-page.component';
 import { SubsectionPageComponent } from './subsection-page/subsection-page.component';
 import { ThesesFormComponent } from './theses-page/theses-form/theses-form.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ThesesListComponent } from './theses-page/theses-list/theses-list.component';
 import { LoginPageComponent } from './authentication/login-page/login-page.component';
 import { AuthHeaderInterceptor } from './authentication/interceptor/auth-header/auth-header.interceptor';
@@ -22,12 +22,13 @@ import { SectionFormComponent } from './section-page/section-form/section-form.c
 import { SubsectionListComponent } from './subsection-page/subsection-list/subsection-list.component';
 import { SubsectionFormComponent } from './subsection-page/subsection-form/subsection-form.component';
 import {AuthGuard} from "./authentication/guard/auth.guard";
-import { NotesPageComponent } from './notes-page/notes-page.component';
-import { NotesFormComponent } from './notes-page/notes-form/notes-form.component';
-import { NotesListComponent } from './notes-page/notes-list/notes-list.component';
 import { TestComponent } from './test/test.component';
 import { TestListComponent } from './test/test-list/test-list.component';
-import { TestFormComponent } from './test-form/test-form.component';
+import {TestFormComponent} from "./test/test-form/test-form.component";
+import { TestQuestionComponent } from './test-question/test-question.component';
+import { QuestionListComponent } from './test-question/question-list/question-list.component';
+import { QuestionFormComponent } from './test-question/question-form/question-form.component';
+
 
 
 
@@ -48,20 +49,21 @@ import { TestFormComponent } from './test-form/test-form.component';
     SectionFormComponent,
     SubsectionListComponent,
     SubsectionFormComponent,
-    NotesPageComponent,
-    NotesFormComponent,
-    NotesListComponent,
     TestComponent,
     TestListComponent,
-    TestFormComponent
+    TestFormComponent,
+    TestQuestionComponent,
+    QuestionListComponent,
+    QuestionFormComponent
   ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    AppRoutingModule,
-    RouterOutlet,
-    ReactiveFormsModule
-  ],
+    imports: [
+        HttpClientModule,
+        BrowserModule,
+        AppRoutingModule,
+        RouterOutlet,
+        ReactiveFormsModule,
+        FormsModule
+    ],
   providers: [
     AuthGuard,
     {

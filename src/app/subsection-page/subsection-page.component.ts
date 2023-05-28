@@ -25,20 +25,20 @@ export class SubsectionPageComponent {
 
   getSubSections(id: number): void {
 
-    this.service.getSubSections(id).subscribe((sections: Section[]) => {
-      this.subsections = sections;
+    this.service.getSubSections(id).subscribe((subsections: Subsection[]) => {
+      this.subsections = subsections;
     })
   }
 
-  updateSubSection(section: Section): void {
-    this.service.updateSubSection(section).subscribe(() => {
+  updateSubSection(subsection: Subsection): void {
+    this.service.updateSubSection(subsection).subscribe(() => {
       this.getSubSections(Number (this.id));
     })
   }
 
-  selectSubSectionToUpdate(sectionID: number): void{
-    this.service.getSubSection(sectionID).subscribe((section: Section) =>{
-      this.subsection = section;
+  selectSubSectionToUpdate(subsectionID: number): void{
+    this.service.getSubSection(subsectionID).subscribe((subsection: Subsection) =>{
+      this.subsection = subsection;
     })
   }
 }

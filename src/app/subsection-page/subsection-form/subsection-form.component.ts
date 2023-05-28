@@ -10,9 +10,9 @@ import {Subsection} from "../../model/subsection/subsection.model";
 })
 export class SubsectionFormComponent {
   @Input()
-  set subsectionData(section: Subsection | undefined){
-    if(section){
-      this.form.setValue(section);
+  set subsectionData(subsection: Subsection | undefined){
+    if(subsection){
+      this.form.setValue(subsection);
     }
   }
 

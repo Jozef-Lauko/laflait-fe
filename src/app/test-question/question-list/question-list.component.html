@@ -1,0 +1,64 @@
+<!--
+<div class="container">
+  <div *ngFor="let question of questions">
+    <div class="ramcek">
+
+      <p>{{question.questionDespricption}}</p>
+      <p>{{question.ans1}}</p>
+      <p>{{question.ans2}}</p>
+      <p>{{question.ans3}}</p>
+      <p>{{question.ans4}}</p>
+      <div class="right">
+        <button type="submit">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<!--
+<div class="container">
+  <div *ngFor="let question of questions">
+    <div class="ramcek">
+      <p>{{ question.questionDespriction }}</p>
+      <ul>
+        <li *ngFor="let option of question.answerOptions">
+          <label>
+            <input
+              type="radio"
+              name="{{ question.id }}"
+              [value]="option"
+              [(ngModel)]="question.selectedAnswer"
+            />
+            {{ option }}
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <button type="button" (click)="submitTest()">Submit</button>
+</div>
+-->
+
+<div class="container">
+  <form>
+    <div *ngFor="let question of questions">
+      <p>{{question.questionDespricption}}</p>
+      <div class="ramcek">
+        <ul>
+
+          <li>
+            <label>
+              <input type="radio" name="question">{{question.ans1}}/>
+              <input type="radio" name="question">{{question.ans2}}/>
+              <input type="radio" name="question">{{question.ans3}}/>
+              <input type="radio" name="question">{{question.ans4}}/>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="right">
+    <button type="submit">Posli</button>
+    </div>
+  </form>
+</div>

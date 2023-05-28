@@ -38,4 +38,6 @@ export class SectionPageComponent {
       this.section = section;
     })
   }
+
+
 }

@@ -33,4 +33,12 @@ export class ThesesPageComponent {
       this.thesis = thesis;
     })
   }
+
+  checkRole(user: string): boolean{
+    if(user == "ADMIN"){
+      return true;
+    }
+      return false;
+  }
+
 }

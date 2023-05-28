@@ -23,4 +23,16 @@ export class ThesesService {
   updateThesis(thesis: Theses): Observable<number> {
     return this.http.put<number>(`${this.url}/${thesis.id}`, thesis);
   }
+  setAdminRole(group: string): void {
+    localStorage.setItem("ROLE", group);
+  }
+
+  getAdminRole(): string {
+    let user_role = localStorage.getItem("ROLE")
+    if(user_role == null){
+      return " "
+    }
+    return user_role;
+  }
+
 }

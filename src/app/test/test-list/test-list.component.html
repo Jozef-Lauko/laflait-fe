@@ -1,1 +1,8 @@
-<p>test-list works!</p>
+<div class="container">
+  <div *ngFor="let test of tests">
+    <div class="ramcek">
+      <p>{{test.testDescription}}</p>
+      <button (click)="getTestByTestQuestion(test.id)">Otestuj sa !!</button>
+    </div>
+  </div>
+</div>
