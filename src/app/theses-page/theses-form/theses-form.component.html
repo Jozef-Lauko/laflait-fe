@@ -11,6 +11,6 @@
   </label>
 
   <button type="submit" [disabled]="form.invalid">Uložiť</button>
-  <button type="reset">Zrušiť</button>
+  <button type="reset" (click)="closeModal()">Zrušiť</button>
 
 </form>

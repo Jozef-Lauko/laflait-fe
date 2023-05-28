@@ -8,8 +8,20 @@
   <label>Popis:
     <textarea type="text" formControlName="text"></textarea>
   </label>
+  <label>ID - poznamky:
+    <input type="text" formControlName="notesId">
+  </label>
+  <label>Popis - poznamky:
+    <textarea type="text" formControlName="notesText"></textarea>
+  </label>
+  <label>Obrazok
+    <textarea type="text" formControlName="notesImageData"></textarea>
+  </label>
+  <label>Kod
+    <textarea type="text" formControlName="notesCode"></textarea>
+  </label>
 
   <button type="submit" [disabled]="form.invalid">Uložiť</button>
-  <button type="reset">Zrušiť</button>
+  <button type="reset" (click)="closeModal()">Zrušiť</button>
 
 </form>

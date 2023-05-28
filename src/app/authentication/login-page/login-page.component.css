@@ -1,45 +1,41 @@
 *,
 *:before,
-*:after{
+*:after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-.body{
-  margin: 200em;
+
+body {
   font-family: Arial, Helvetica, sans-serif;
-  padding-bottom: 10em;
+  position: relative;
+  min-height: 100vh;
 }
-.background{
+
+.background {
   width: 20em;
   height: 30em;
   position: absolute;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
 }
-.background .shape{
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  border-radius: 50%;
-}
 
-form{
+form {
   height: 27em;
   width: 30em;
-  background-color: rgba(255,255,255,0.13);
+  background-color: rgba(255, 255, 255, 0.13);
   position: absolute;
-  transform: translate(-50%,-50%);
-  top: 50%;
+  transform: translate(-50%, -50%);
+  top: 40%;
   left: 50%;
   border-radius: 10px;
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(255,255,255,0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
   padding: 50px 35px;
 }
 
-form *{
+form * {
   font-family: Arial, Helvetica, sans-serif;
   color: beige;
   letter-spacing: 0.5px;
@@ -47,24 +43,25 @@ form *{
   border: none;
 }
 
-form h2{
+form h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 32px;
   line-height: 42px;
   text-align: center;
 }
 
-label{
+label {
   display: block;
   margin-top: 30px;
   font-size: 16px;
   font-weight: 300;
 }
-input{
+
+input {
   display: block;
   height: 50px;
   width: 100%;
-  background-color: rgba(255,255,255,0.07);
+  background-color: rgba(255, 255, 255, 0.07);
   border-radius: 3px;
   padding: 0 10px;
   margin-top: 8px;
@@ -72,8 +69,8 @@ input{
   font-weight: 300;
 }
 
-button{
-  margin-top: 20em;
+button {
+  margin-top: 2em;
   width: 100%;
   background-color: #FF595A;
   color: #080710;
@@ -110,4 +107,3 @@ button[type="submit"]:hover {
   border-radius: 4px;
   margin-bottom: 16px;
 }
-

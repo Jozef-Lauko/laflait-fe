@@ -15,6 +15,7 @@ export class SubsectionPageComponent {
   subsections: Array<Subsection> = [];
   subsection?: Subsection;
   id: string | null | undefined;
+  showFormModal: boolean = false;
 
   constructor(private route: ActivatedRoute, private service: SubsectionService) {}
 
@@ -25,20 +26,25 @@ export class SubsectionPageComponent {
 
   getSubSections(id: number): void {
 
-    this.service.getSubSections(id).subscribe((sections: Section[]) => {
-      this.subsections = sections;
+    this.service.getSubSections(id).subscribe((subsections: Subsection[]) => {
+      this.subsections = subsections;
     })
   }
 
-  updateSubSection(section: Section): void {
+  updateSubSection(section: Subsection): void {
     this.service.updateSubSection(section).subscribe(() => {
       this.getSubSections(Number (this.id));
     })
   }
 
   selectSubSectionToUpdate(sectionID: number): void{
-    this.service.getSubSection(sectionID).subscribe((section: Section) =>{
-      this.subsection = section;
+    this.service.getSubSection(sectionID).subscribe((subsection: Subsection) =>{
+      this.subsection = subsection;
+      this.showFormModal = true;
     })
+  }
+
+  closeModal() {
+    this.showFormModal = false;
   }
 }

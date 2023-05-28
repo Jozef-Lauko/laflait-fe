@@ -19,6 +19,9 @@ export class ThesesFormComponent {
   @Output()
   formUpdate = new EventEmitter<Theses>();
 
+  @Output()
+  closeModalWindow: EventEmitter<void> = new EventEmitter<void>();
+
   form: FormGroup;
 
   constructor() {
@@ -32,6 +35,7 @@ export class ThesesFormComponent {
   saveThesis(): void {
     if(this.form.valid) {
       this.formUpdate.emit(this.prepareThesis())
+      this.closeModal();
       this.form.reset();
     }
   }
@@ -44,5 +48,7 @@ export class ThesesFormComponent {
     };
   }
 
-
+  closeModal() {
+    this.closeModalWindow.emit();
+  }
 }

@@ -11,6 +11,7 @@ export class ThesesPageComponent {
 
   theses: Array<Theses> = [];
   thesis?: Theses;
+  showFormModal: boolean = false;
 
   constructor(private service: ThesesService) {
     this.getTheses();
@@ -31,6 +32,11 @@ export class ThesesPageComponent {
   selectThesisToUpdate(thesisID: number): void {
     this.service.getThesis(thesisID).subscribe((thesis: Theses) => {
       this.thesis = thesis;
+      this.showFormModal = true;
     })
+  }
+
+  closeModal() {
+    this.showFormModal = false;
   }
 }

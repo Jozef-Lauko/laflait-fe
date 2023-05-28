@@ -5,9 +5,12 @@
   (subsectionToUpdate)="selectSubSectionToUpdate($event)">
 </app-subsection-list>
 
-<app-subsection-form
-  [subsectionData]="subsection"
-  (formUpdate)="updateSubSection($event)">
-</app-subsection-form>
+<div *ngIf="showFormModal" class="modal">
+  <app-subsection-form
+    [subsectionData]="subsection"
+    (formUpdate)="updateSubSection($event)"
+    (closeModalWindow)="closeModal()">
+  </app-subsection-form>
+</div>
 <br>
 </body>

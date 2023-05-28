@@ -1,14 +1,24 @@
 <div class="container">
   <div class="text">
     <div *ngFor="let section of sections">
+      <div class="ramcek">
       <h3>{{section.title}}</h3>
       <p>{{section.text}}</p>
+      <p>{{section.notestext}}</p>
+
+      <div class="code-snippet" *ngIf="section.notescode">
+        <div class="code">
+          <p>{{section.notescode}}</p>
+        </div>
+      </div>
+
       <div class="right">
-        <button (click)="getSubSectionBySection(section.id)">SELECT</button>
+        <button (click)="getSubSectionBySection(section.id)" *ngIf="section.haveSubsection">Podkapitola</button>
         <button (click)="updateSection(section.id)">
           Upraviť
         </button>
       </div>
+    </div>
     </div>
   </div>
 </div>

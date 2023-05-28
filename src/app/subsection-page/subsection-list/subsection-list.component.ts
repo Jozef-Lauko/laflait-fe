@@ -20,7 +20,5 @@ export class SubsectionListComponent {
   updateSubSection(sectionId: number): void{
     this.subsectionToUpdate.emit(sectionId);
   }
-  getNoteBySubsection(id: number) {
-    this.router.navigate(['/poznamky', id])
-  }
+
 }

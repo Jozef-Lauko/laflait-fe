@@ -13,8 +13,8 @@ export class SectionService {
 
   constructor(private http: HttpClient) { }
 
-  getSections(thesisID: number): Observable<Subsection[]> {
-    return this.http.get<Subsection[]>(`${this.url}/${thesisID}`);
+  getSections(thesisID: number): Observable<Section[]> {
+    return this.http.get<Section[]>(`${this.url}/${thesisID}`);
   }
 
   getSection(sectionID: number): Observable<Section> {

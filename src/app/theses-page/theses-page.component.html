@@ -5,9 +5,12 @@
     (thesisToUpdate)="selectThesisToUpdate($event)">
   </app-theses-list>
 
-  <app-theses-form
-    [thesisData]="thesis"
-    (formUpdate)="updateThesis($event)">
-  </app-theses-form>
-<br>
+<div *ngIf="showFormModal" class="modal">
+    <app-theses-form
+      [thesisData]="thesis"
+      (formUpdate)="updateThesis($event)"
+      (closeModalWindow)="closeModal()">
+    </app-theses-form>
+  <br>
+</div>
 </body>

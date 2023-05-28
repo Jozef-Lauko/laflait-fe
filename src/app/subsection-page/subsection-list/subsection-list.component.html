@@ -1,14 +1,23 @@
 <div class="container">
   <div class="text">
     <div *ngFor="let subsection of subsections">
+      <div class="ramcek">
       <h3>{{subsection.title}}</h3>
       <p>{{subsection.text}}</p>
+      <p>{{subsection.notestext}}</p>
+
+      <div class="code-snippet" *ngIf="subsection.notescode">
+        <div class="code">
+          <p>{{subsection.notescode}}</p>
+        </div>
+      </div>
       <div class="right">
-        <button (click)="getNoteBySubsection(subsection.id)">SELECT</button>
+
         <button (click)="updateSubSection(subsection.id)">
         Upraviť
       </button>
       </div>
+    </div>
     </div>
   </div>
 </div>

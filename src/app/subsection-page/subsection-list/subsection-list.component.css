@@ -25,6 +25,15 @@ table{
   border-radius: 3px;
 }
 
+.ramcek{
+  background-color: #001233;
+  border: 3px solid #FF595A;
+  text-align: center;
+  border-radius: 3px;
+  margin: 2em;
+  padding: 1em;
+}
+
 h3{
   color: beige;
 }
@@ -70,4 +79,18 @@ button:active {
   display: flex;
   justify-content: right;
   align-items: flex-end;
+}
+
+.code-snippet {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.code p {
+  color: #080710;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre;
+  overflow-x: auto;
 }

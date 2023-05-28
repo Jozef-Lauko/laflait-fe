@@ -5,9 +5,12 @@
   (sectionToUpdate)="selectSectionToUpdate($event)">
 </app-section-list>
 
-<app-section-form
-  [sectionData]="section"
-  (formUpdate)="updateSection($event)">
-</app-section-form>
+<div *ngIf="showFormModal" class="modal">
+  <app-section-form
+    [sectionData]="section"
+    (formUpdate)="updateSection($event)"
+    (closeModalWindow)="closeModal()">
+  </app-section-form>
+</div>
 <br>
 </body>

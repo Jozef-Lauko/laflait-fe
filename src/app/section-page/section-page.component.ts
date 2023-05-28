@@ -13,6 +13,7 @@ export class SectionPageComponent {
   sections: Array<Section> = [];
   section?: Section;
   id: string | null | undefined;
+  showFormModal: boolean = false;
 
   constructor(private route: ActivatedRoute, private service: SectionService) {}
 
@@ -36,6 +37,11 @@ export class SectionPageComponent {
   selectSectionToUpdate(sectionID: number): void{
     this.service.getSection(sectionID).subscribe((section: Section) =>{
       this.section = section;
+      this.showFormModal = true;
     })
+  }
+
+  closeModal() {
+    this.showFormModal = false;
   }
 }
