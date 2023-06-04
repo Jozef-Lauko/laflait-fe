@@ -28,6 +28,7 @@ import {TestFormComponent} from "./test/test-form/test-form.component";
 import { TestQuestionComponent } from './test-question/test-question.component';
 import { QuestionListComponent } from './test-question/question-list/question-list.component';
 import { QuestionFormComponent } from './test-question/question-form/question-form.component';
+import { SectionNewComponent } from './section-page/section-new/section-new.component';
 
 
 
@@ -54,7 +55,8 @@ import { QuestionFormComponent } from './test-question/question-form/question-fo
     TestFormComponent,
     TestQuestionComponent,
     QuestionListComponent,
-    QuestionFormComponent
+    QuestionFormComponent,
+    SectionNewComponent
   ],
     imports: [
         HttpClientModule,

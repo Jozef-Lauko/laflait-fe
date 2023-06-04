@@ -3,6 +3,12 @@
     <div class="ramcek">
       <p>{{test.testDescription}}</p>
       <button (click)="getTestByTestQuestion(test.id)">Otestuj sa !!</button>
+      <button (click)="showCorrectAnswers(test.id)">Zobraz spravne odpovede</button>
     </div>
+  </div>
+  <button (click)="switch()">AHOJ</button>
+  <h1 *ngIf="ahoj"> Toto je ngIF</h1>
+  <div *ngFor="let t of testAnswers">
+    <p>{{t}}</p>
   </div>
 </div>

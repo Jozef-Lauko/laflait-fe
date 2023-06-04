@@ -35,4 +35,8 @@ export class ThesesService {
     return user_role;
   }
 
+  getSize(): Observable<number>{
+    return this.http.get<number>(this.url+"/size");
+  }
+
 }

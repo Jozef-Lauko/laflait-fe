@@ -1,4 +1,10 @@
 <div class="container">
+  <div>
+    <span>Téza č.:</span>
+    <input [(ngModel)]="filterSearch">
+    <button (click)="search()">Search</button>
+    <button (click)="refresh()">Backup</button>
+  </div>
     <div *ngFor="let thesis of theses">
       <div class="ramcek">
       <p>{{thesis.title}}</p>

@@ -11,9 +11,11 @@ export class ThesesPageComponent {
 
   theses: Array<Theses> = [];
   thesis?: Theses;
+  thesisAmount?: number;
 
   constructor(private service: ThesesService) {
     this.getTheses();
+    this.getThesisSize();
   }
 
   getTheses(): void {
@@ -39,6 +41,12 @@ export class ThesesPageComponent {
       return true;
     }
       return false;
+  }
+
+  getThesisSize(): void{
+    this.service.getSize().subscribe((data: number) => {
+      this.thesisAmount = data;
+    })
   }
 
 }
